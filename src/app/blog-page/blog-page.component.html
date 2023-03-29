@@ -1,0 +1,129 @@
+<app-header></app-header>
+<div id="wrapper">
+    <!-- content -->	
+    <div class="content">
+        <!--  section  -->
+        <section class="hidden-section single-par2  " data-scrollax-parent="true">
+            <div class="bg-wrap bg-parallax-wrap-gradien">
+                <div class="bg par-elem "  data-bg="assets/images/bg/4.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+            </div>
+            <div class="container">
+                <div class="section-title center-align big-title">
+                    <h2><span>Nos dernières nouvelles</span></h2>
+                    <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet fermentum sem.</h4> -->
+                </div>
+                <div class="scroll-down-wrap">
+                    <div class="mousey">
+                        <div class="scroller"></div>
+                    </div>
+                    <span>Faites défiler vers le bas pour découvrir</span>
+                </div>
+            </div>
+        </section>
+        <!--  section  end-->
+        <!-- breadcrumbs-->
+        <div class="breadcrumbs fw-breadcrumbs sp-brd fl-wrap">
+            <div class="container">
+                <div class="breadcrumbs-list">
+                    <a href="#">Accueil</a> <span>Actualités</span>
+                </div>
+                <div class="share-holder hid-share">
+                    <a href="#" class="share-btn showshare sfcs">  <i class="fas fa-share-alt"></i>  Share   </a>
+                    <div class="share-container  isShare"></div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumbs end -->
+        <!-- col-list-wrap -->
+        <div class="gray-bg small-padding fl-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="post-container fl-wrap"  *ngFor="let item of dataArray; index as i">
+                            <!-- article> --> 
+                            <article class="post-article fl-wrap">
+                                <div class="list-single-main-media fl-wrap">
+                                    <div class="single-slider-wrapper carousel-wrap fl-wrap">
+                                        <div class="single-slider fl-wrap carousel lightgallery"  >
+                                            <!--  slick-slide-item -->
+                                            <div class="slick-slide-item">
+                                                <div class="box-item">
+                                                    <a href="assets/images/agency/agent/blog.png" class="gal-link popup-image"><i class="fal fa-search"  ></i></a>
+                                                    <img  [src]="'http://localhost:3000/getimage/'+item.image" alt="">
+                                                </div>
+                                            </div>
+                                            <!--  slick-slide-item end -->
+                                        
+                                        </div>
+                                        <div class="swiper-button-prev ssw-btn"><i class="fas fa-caret-left"></i></div>
+                                        <div class="swiper-button-next ssw-btn"><i class="fas fa-caret-right"></i></div>
+                                    </div>
+                                </div>
+                                <div class="list-single-main-item fl-wrap block_box">
+                                    <h2 class="post-opt-title"><a [routerLink]="['/blog_detail',item._id]">{{item.titre}}</a></h2>
+                                    <p>{{item.des}}</p>
+                                    <span class="fw-separator fl-wrap"></span>
+                                    <!-- <div class="post-author"><a href="#"><img src="assets/images/avatar/5.jpg" alt=""><span>By , Alisa Noory</span></a></div> -->
+                                    <div class="post-opt">
+                                        <ul class="no-list-style">
+                                            <li><i class="fal fa-calendar"></i> <span>{{item.date|date}}</span></li>
+                                        </ul>
+                                    </div>
+                                    <a [routerLink]="['/blog_detail',item._id]" class="btn color-bg float-btn small-btn">Lire la suite </a>
+                                </div>
+                            </article>
+                          
+                            <!-- pagination-->
+                            
+                            <!-- pagination end-->						
+                        </div>
+                       
+                    </div>
+                    <!-- col-md 8 end -->
+                    <!--  sidebar-->
+                    <div class="col-md-4">
+                        <div class="box-widget-wrap fl-wrap fixed-bar">
+                            <!--box-widget-->
+                            <div class="box-widget fl-wrap">
+                                <div class="search-widget fl-wrap">
+                                    <form action="#" class="fl-wrap custom-form">
+                                        <input name="se" id="se" type="text" class="search" placeholder="Search.." value="" />
+                                        <button class="search-submit" id="submit_btn"><i class="far fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--box-widget end -->										
+                            <!--box-widget-->
+                            <div class="box-widget fl-wrap">
+                                <div class="box-widget-title fl-wrap">Les meilleurs posts</div>
+                                <div class="box-widget-content fl-wrap">
+                                    <!--widget-posts-->
+                                    <div class="widget-posts  fl-wrap">
+                                        <ul class="no-list-style" *ngFor="let i of dataArray.slice(0,3)" >
+                                            <li>
+                                                <div class="widget-posts-img"><a [routerLink]="['/blog_detail',i._id]"><img [src]="'http://localhost:3000/getimage/'+i.image" alt=""></a></div>
+                                                <div class="widget-posts-descr">
+                                                    <h4><a href="listing-single.html">Nullam dictum felis</a></h4>
+                                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fal fa-calendar"></i> {{i.date |date}}</a></div>
+                                                </div>
+                                            </li>
+                                         
+                                        </ul>
+                                    </div>
+                                    <!-- widget-posts end-->                                                        
+                                </div>
+                            </div>
+                         									
+                        </div>
+                        <!-- sidebar end-->								
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="limit-box fl-wrap"></div>
+    </div>
+    <!-- content end -->	
+
+
+</div>
+<app-footer></app-footer>

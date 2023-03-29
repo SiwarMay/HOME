@@ -1,0 +1,56 @@
+<br><br><br>
+<app-main-admin></app-main-admin>
+<div class="container">
+    
+    <!-- section-title -->
+  
+    <!-- section-title end -->
+    <div class="clearfix"></div>
+<div class="dasboard-wrapper fl-wrap no-pag">
+    
+    <div id="wrapper">
+        
+        <div class="dashboard-content">
+            
+<div class="dasboard-widget-box fl-wrap">
+    <div class="dashboard-title-item"><span>Modifier vos coordonnées</span></div>
+
+    <div class="custom-form">
+        
+        <form  class="custom-form" #f="ngForm" (ngSubmit)="updatenewcontact(f)" id="contactform">
+            <fieldset>
+                <div class="col-sm-12">		 
+                        <div class="dashboard-title-item"><span>   .</span></div>
+                </div> 
+                <!-- <label>Titre</label> -->
+                <div class="col-sm-12">		 
+                    <label for="email">Email  <span class="dec-icon"><i class="far fa-envelope"></i></span></label>
+                    <input [(ngModel)]="contact.email" type="text" placeholder="Email" name="email"/>
+                </div> 
+                <!-- 
+                <input   type="text"  name="email" id="email" placeholder="Email Address*" value=""/> -->
+                <!-- <label>Description</label> -->
+                <div class="col-sm-12">		 
+                    <label  for="phone">Tél  <span class="dec-icon"><i class="far fa-phone"></i></span></label>
+                    <input  [(ngModel)]="contact.phone" type="text" name="phone" placeholder="Tél"  value="">
+                </div>  
+                <div class="col-sm-12">		 
+                    <label  for="adresse">Adresse  <span class="dec-icon"><i class="far fa-map"></i></span></label>
+                    <input  [(ngModel)]="contact.adresse" type="text" name="adresse" placeholder="Adresse" value="">
+                </div>
+                <div class="col-sm-12">		 
+                    <label  for="description">Description  <span class="dec-icon"><i class="far fa-text"></i></span></label>
+                    <input  [(ngModel)]="contact.description" type="text" name="description"placeholder="Description"  value="">
+                </div>
+               
+            </fieldset>
+            <button (click)="updatenewcontact(f)" href="/dashboard_admin/coordonnee" class="btn color-bg float-btn" >Modifier</button>
+
+        </form>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>

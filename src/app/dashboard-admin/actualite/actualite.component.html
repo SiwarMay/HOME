@@ -1,0 +1,92 @@
+<div id="wrapper">
+    <!-- dashbard-menu-wrap -->
+    <div class="dashbard-menu-overlay"></div>
+   <app-main-admin></app-main-admin>
+    <!-- dashbard-menu-wrap end  -->		
+    <!-- content -->	
+    <div class="dashboard-content">
+        <div class="dashboard-menu-btn color-bg"><span><i class="fas fa-bars"></i></span>Dasboard Menu</div>
+        <div class="container dasboard-container">
+            <!-- dashboard-title -->	
+            <div class="dashboard-title fl-wrap">
+                <div class="dashboard-title-item"><span>Votre actualités </span></div>
+                <div class="dashbard-menu-header">
+                    <div class="dashbard-menu-avatar fl-wrap">
+                        <img src="assets/images/avatar/5.jpg" alt="">
+                        <h4>Bienvenu, <span>Alica Noory</span></h4>
+                    </div>
+                    <a href="index.html" class="log-out-btn   tolt" data-microtip-position="bottom"  data-tooltip="Log Out"><i class="far fa-power-off"></i></a>
+                </div>
+                <!--Tariff Plan menu-->
+              
+                <!--Tariff Plan menu end-->						
+            </div>
+            <!-- dashboard-title end -->		
+            <div class="dasboard-wrapper fl-wrap">
+                <div class="dasboard-listing-box fl-wrap">
+                    <div class="dasboard-opt sl-opt fl-wrap">
+                        <div class="dashboard-search-listing">
+                            <input type="text" placeholder="Chercher" value="">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </div>
+                        <a class="gradient-bg dashboard-addnew_btn btn small-btn float-btn color-bg cf_btn">Ajouter actualité<i class="fal fa-plus"></i></a>	
+                        <!-- price-opt-->
+                        
+                        <!-- price-opt end-->
+                    </div>
+                    <!-- dashboard-listings-wrap-->
+                    <div class="dashboard-listings-wrap fl-wrap" >
+                        <div class="row" >
+                            <!-- dashboard-listings-item-->
+                            <div class="col-md-6"  *ngFor="let item of dataArray;index as i ">
+                                <div class="dashboard-listings-item fl-wrap">
+                                    <div class="dashboard-listings-item_img">
+                                        <div class="bg-wrap">
+                                            <div class="bg" >
+                                                <img [src]="'http://localhost:3000/getimage/'+item.image">
+                                            </div>
+                                        </div>
+                                        <div class="overlay"></div>
+                                        <a class="color-bg modal-open">View</a>
+                                    </div>
+                                    <div class="dashboard-listings-item_content">
+                                        <h4><a href="listing-single.html">{{item.titre}}</a></h4>
+                                        <div class="geodir-category-location">
+                                            <a href="#"><i class="fas fa-map-marker-alt"></i> <span> {{item.des}}</span></a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="listing-rating card-popup-rainingvis tolt" data-microtip-position="right" data-tooltip="Good" data-starrating2="4"></div>
+                                        <div class="dashboard-listings-item_opt">
+                                            <span class="viewed-counter geodir-category-content_price"> $ {{item.date | date}}</span>
+                                            <ul>
+                                                <li><a class="tolt modal-open" click="get_data(item.titre,item.des,item._id)]"   [routerLink]="['modifier_act/',item._id]"  data-microtip-position="top-left"  data-tooltip="Edit"><i class="far fa-edit modal-open"></i></a></li>
+                                                <li><a class="tolt" data-microtip-position="top-left"  data-tooltip="Disable"><i class="far fa-signal-alt-slash"></i></a></li>
+                                                <li><a  class="tolt" data-microtip-position="top-left"  data-tooltip="Delete" (click)="delete(item._id,i)"><i class="far fa-trash-alt"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- dashboard-listings-item end--> 									
+                            <!-- dashboard-listings-item-->
+                          
+                            <!-- dashboard-listings-item end--> 												
+                        </div>
+                    </div>
+                    <!-- dashboard-listings-wrap end-->
+                </div>
+             
+            </div>
+        </div>
+        <!-- dashboard-footer -->
+        <!-- dashboard-footer end -->	
+    </div>
+    <!-- content end -->	
+        <app-ajout-act></app-ajout-act>
+
+    <div class="dashbard-bg gray-bg"></div>
+
+</div>
+
+
+

@@ -1,0 +1,114 @@
+
+
+<div class="contact-form-wrap">
+    <div class="contact-form-container">
+        <div class="contact-form-main fl-wrap">
+            <div class="contact-form-header">
+                <h4>Ajouter une Actualités</h4>
+                <span class="close-contact-form"><i class="fal fa-times"></i></span>
+            </div>
+            <div id="contact-form" class="contact-form fl-wrap">
+                
+                <form  class="custom-form" action="https://homeradar.kwst.net/php/contact.php" name="contactform" id="contactform">
+                    <fieldset>
+                        <!-- <label>Titre</label> -->
+                        <div class="col-sm-12">		 
+                            <label for="titre">Titre  <span class="dec-icon"><i class="far fa-briefcase"></i></span></label>
+                            <input [(ngModel)]="actualite.titre" type="text" placeholder="Titre" name="titre"/>
+                        </div> 
+                        <!-- 
+                        <input   type="text"  name="email" id="email" placeholder="Email Address*" value=""/> -->
+                        <!-- <label>Description</label> -->
+                        <div class="col-sm-12">		 
+                            <label  for="des">Description </label>
+                            <textarea  [(ngModel)]="actualite.des" type="text"  name="des" value=""></textarea>
+                        </div>  
+                        <div class="col-sm-12">	  
+                        <form class="fuzone">
+                            <div class="fu-text">
+                                <span><i class="far fa-cloud-upload-alt"></i>Ajouter une image</span>
+                                <div class="photoUpload-files fl-wrap"></div>
+                            </div>
+                            <input type="file" (change)="select($event)" class="upload" multiple>
+                        </form> 
+                        </div>
+                    </fieldset>
+                    <button (click)="create()" class="btn float-btn color-bg" style="margin-top:15px;" id="submit">Send Message</button>
+                </form>
+            </div>
+            <!-- contact form  end--> 					
+        </div>
+    </div>
+    <div class="contact-form-overlay"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <br><br><br>
+<app-main-admin></app-main-admin>
+<div class="container"> -->
+    <!-- section-title -->
+  
+    <!-- section-title end -->
+    <!-- <div class="clearfix"></div>
+<div class="dasboard-wrapper fl-wrap no-pag">
+    <div id="wrapper">
+        <div class="dashboard-content">
+<div class="dasboard-widget-box fl-wrap">
+    <div class="custom-form">
+        <div class="row">
+            <div class="col-sm-6">		 
+                <label for="titre">Titre  <span class="dec-icon"><i class="far fa-briefcase"></i></span></label>
+                <input [(ngModel)]="actualite.titre" type="text" placeholder="Titre" name="titre"/>
+            </div>                              
+            <div class="col-sm-6">		 
+                <label>Description <span class="dec-icon"><i class="far fa-money-bill-wave"></i></span></label>
+                <input  [(ngModel)]="actualite.des" type="text" placeholder="Description" value=""/>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="dasboard-widget-box   fl-wrap">
+    <div class="custom-form">
+        <div class="clearfix"></div>
+        <div class="listsearch-input-item fl-wrap">
+            <form class="fuzone">
+                <div class="fu-text">
+                    <span><i class="far fa-cloud-upload-alt"></i>Ajouter une image</span>
+                    <div class="photoUpload-files fl-wrap"></div>
+                </div>
+                <input type="file" (change)="select($event)" class="upload" multiple>
+            </form>
+        </div>
+    </div>
+</div>
+<button (click)="create()" class="btn color-bg float-btn">Ajouter</button>
+</div>
+</div>
+</div>
+</div> -->

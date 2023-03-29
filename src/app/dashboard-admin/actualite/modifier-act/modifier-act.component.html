@@ -1,0 +1,46 @@
+<br><br><br>
+<app-main-admin></app-main-admin>
+<div class="container">
+    <!-- section-title -->
+  
+    <!-- section-title end -->
+    <div class="clearfix"></div>
+<div class="dasboard-wrapper fl-wrap no-pag">
+    <div id="wrapper">
+        <div class="dashboard-content">
+<div class="dasboard-widget-box fl-wrap">
+   
+    <div class="custom-form">
+        <form  class="custom-form" #f="ngForm" (ngSubmit)="updatenewactualite(f)" id="contactform">
+            <fieldset>
+                <!-- <label>Titre</label> -->
+                <div class="col-sm-12">		 
+                    <label for="titre">Titre  <span class="dec-icon"><i class="far fa-briefcase"></i></span></label>
+                    <input [(ngModel)]="actualite.titre" type="text" placeholder="Titre" name="titre"/>
+                </div> 
+                <!-- 
+                <input   type="text"  name="email" id="email" placeholder="Email Address*" value=""/> -->
+                <!-- <label>Description</label> -->
+                <div class="col-sm-12">		 
+                    <label  for="des">Description </label>
+                    <textarea  [(ngModel)]="actualite.des" type="text" name="des"  value=""></textarea>
+                </div>  
+                <div class="col-sm-12">	  
+                <form class="fuzone">
+                    <div class="fu-text">
+                        <span><i class="far fa-cloud-upload-alt"></i>Ajouter une image</span>
+                        <div class="photoUpload-files fl-wrap"></div>
+                    </div>
+                    <input type="file" (change)="select($event)"  class="upload" multiple>
+                </form> 
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<button (click)="updatenewactualite(f)" class="btn color-bg float-btn" >Modifier</button>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,62 @@
+<app-main-admin></app-main-admin>
+
+<div class="dashboard-content">
+    
+<section class="gray-bg small-padding">
+    
+    <div class="container">
+        <div class="row"><div class="services-item fl-wrap dashboard-title-item col-md-4 "><span>Nos coordonnées</span></div>
+    </div>
+        <div class="row" *ngFor="let item of dataArray" >
+            <!-- services-item -->
+            <div class="col-md-4">
+                <div class="services-item fl-wrap">
+                    <i class="fal fa-envelope"></i>
+                    <h4>Notre mail <span>01</span></h4>
+                    <a href="#" class="serv-link sl-b">{{item.email}}</a>
+                </div>
+            </div>
+            <!-- services-item  end-->
+            <!-- services-item -->
+            <div class="col-md-4">
+                <div class="services-item fl-wrap">
+                    <i class="fal fa-phone-rotary"></i>
+                    <h4> Nos téléphones<span>02</span></h4>
+                    <a href="#" class="serv-link sl-b">{{item.phone}}</a>
+                </div>
+            </div>
+            <!-- services-item  end-->
+            <!-- services-item -->
+            <div class="col-md-4">
+                <div class="services-item fl-wrap">
+                    <i class="fal fa-map-marked"></i>
+                    <h4>Notre adresse  <span>03</span></h4>
+                    <a href="#" class="serv-link sl-b">{{item.adresse}}</a>
+                </div>
+            </div>
+            <!-- services-item  end-->								
+        </div>
+        <div class="clearfix"></div>
+        <div class="contacts-opt fl-wrap">
+            <div class="contact-social">
+                <span class="cs-title">Trouvez-nous sur 
+                </span>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                </ul>
+            </div>
+            <a  [routerLink]="['/dashboard_admin/coordonnee/modifier']" class="btn small-btn float-btn color-bg cf_btn">Ecrire un message</a>
+        </div>
+        <!--box-widget  -->			
+              <div class="contact-form-wrap">
+ 
+    <div class="contact-form-overlay"></div>
+</div>
+<!--contact-form-wrap end-->
+        <!--box-widget end --> 									
+    </div>
+</section>
+</div>
