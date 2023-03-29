@@ -22,16 +22,16 @@ export class DataService {
   getMaisonById(id:any){
     return this.http.get(this.url + 'getbyid/' + id)
   }
-  getAllmaisons(){
-    return this.http.get('http://127.0.0.1:3000/maison/maisons');
-  }
+
   deletemaisons(id:any){
     return this.http.delete(this.url+'supprimer/'+id);
   }
   updatemaisons(id:string,newmaison:any){
     return this.http.put(this.url + 'update/' + id,newmaison)
   }
-  
+  countmaisons(){
+    return this.http.get(this.url+'count/')
+  }
 
   ////////////////* Actualité *///////////////
   createactualite(actualite:any){
@@ -53,7 +53,6 @@ export class DataService {
   }
   countActualite(){
     return this.http.get(this.urlact+'count/')
-
   }
 
   ///////////////// contact ///////

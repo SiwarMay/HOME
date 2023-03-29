@@ -7,7 +7,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./dashboard-admin.component.css']
 })
 export class DashboardAdminComponent {
-  countact: number = 0;
+  count_act: number = 0;
   
   constructor(private ds: DataService) { }
 
@@ -18,7 +18,7 @@ export class DashboardAdminComponent {
   // Méthode pour récupérer le nombre d'actualités depuis le service DataService
   getNombreActualites() {
     this.ds.countActualite().subscribe((response: any) => {
-      this.countact = response.count;
+      this.count_act = response.count;
     });
   }
 }

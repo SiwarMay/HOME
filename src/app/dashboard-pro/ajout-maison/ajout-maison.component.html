@@ -1,8 +1,7 @@
-<app-main></app-main>
 
   
         <div id="wrapper">
-              	
+            <app-main></app-main>              	
                 <div class="dashboard-content">
                     
                     <div >
@@ -78,7 +77,7 @@
                                         <div class="col-sm-6">
                                             <label>Gouvernerat</label>
                                             <div class="listsearch-input-item">
-                                                <select  [(ngModel)]="maison.gouvernerat" type="text" data-placeholder="gouvernerat" class="chosen-select no-search-select" >
+                                                <select [(ngModel)]="maison.gouvernerat" type="text" data-placeholder="gouvernerat" class="chosen-select no-search-select" >
                                                     <option>Béja</option>
                                                     <option>Bizerte</option>
                                                     <option>Gabès</option>
@@ -162,9 +161,9 @@
                                       
                                     </div>
                                     <div class="clearfix"></div>
-                                    <ul><li *ngFor="let item of maison.caracteristiques">
+                                    <!-- <ul><li *ngFor="let item of maison.caracteristiques">
                                             {{item}}
-                                    </li></ul>
+                                    </li></ul> -->
                                     <label>Caracteristique: </label>
                                     <input [(ngModel)]="maison.caracteristiques" type="text" placeholder="Agréments" value=""/>														
                                     <button class="btn btn-dark w-25" (click)="maison.caracteristiques.push(caracteristique);" caracteristique=""> Ajouter</button>

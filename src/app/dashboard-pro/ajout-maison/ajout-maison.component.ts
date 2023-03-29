@@ -49,7 +49,7 @@ export class AjoutMaisonComponent {
         fd.append('gouvernerat', this.maison.gouvernerat);
         fd.append('garage', this.maison.garage);
         fd.append('caracteristiques', this.maison.caracteristiques);
-        fd.append('iduser',this._auth.getAuthorDataFromToken()._iduser);
+        // fd.append('iduser',this._auth.getAuthorDataFromToken()._iduser);
        
        
         for (let i = 0; i < this.image.length; i++) {
@@ -59,7 +59,7 @@ export class AjoutMaisonComponent {
         this.data.create(fd)
           .subscribe(
             res=>{
-                this.router.navigate(['/home']);
+                this.router.navigate(['/dashboard_pro/listemaison']);
             },
             err=>{
               console.log(err);

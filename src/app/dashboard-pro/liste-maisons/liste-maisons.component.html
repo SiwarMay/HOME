@@ -1,0 +1,61 @@
+
+
+<div id="wrapper">
+    <app-main></app-main>
+    <!-- dashbard-menu-wrap -->
+    <div class="dashbard-menu-overlay"></div>
+    <!-- dashbard-menu-wrap end  -->		
+    <!-- content -->	
+    <div class="dashboard-content">
+        <div class="dashboard-menu-btn color-bg"><span><i class="fas fa-bars"></i></span>Dasboard Menu</div>
+        <div *ngFor="let item of maisons index as i ">
+            <!-- gallery-item-->
+                <!-- listing-item -->
+                <div class="listing-item" class="col-md-4">
+                    <article class="geodir-category-listing fl-wrap" >
+                        <div class="geodir-category-img fl-wrap">
+                            <a [routerLink]="['/maison', item._id]" class="geodir-category-img_item">
+                                <img [src]="'http://127.0.0.1:3000/getimage/' + item.images[0]"  alt="">
+                                <div class="overlay"></div>
+                            </a>
+                            <div class="geodir-category-location">
+                                <a href="#" class="single-map-item tolt" data-newlatitude="40.72956781" data-newlongitude="-73.99726866"   data-microtip-position="top-left" data-tooltip="On the map"><i class="fas fa-map-marker-alt"></i> <span> {{item.adresse}} ,  {{item.gouvernerat}} </span></a>
+                            </div>
+                             </div>
+                        <div class="geodir-category-content fl-wrap">
+                            <h3 class="title-sin_item"><a [routerLink]="['/maison', item._id]">{{item.nom}}</a></h3>
+                            <div class="geodir-category-content_price"> {{item.prix}} dt/mois</div>
+                            <div class="geodir-category-content-details">
+                                <ul>
+                                    <li><i class="fal fa-bed"></i><span>{{item.chambres}}</span></li>
+                                    <li><i class="fal fa-bath"></i><span>{{item.salledebain}}</span></li>
+                                    <li><i class="fal fa-cube"></i><span>{{item.surface}} m
+                                        2</span></li>
+                                </ul>
+                            </div>
+                            <div class="geodir-category-footer fl-wrap">
+                                <a href="agent-single.html" class="gcf-company"><span></span></a>
+                                <div class="listing-rating card-popup-rainingvis tolt" data-microtip-position="top" data-tooltip="Good" data-starrating2="4"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="dashboard-listings-item_opt">
+                            <span class="viewed-counter geodir-category-content_price">Créer le : {{item.datedepot | date}}</span>
+    
+                            <ul>
+                                <li><a class="tolt modal-open" data-microtip-position="top-left"  data-tooltip="Edit"><i class="far fa-edit modal-open"></i></a></li>
+                                <li><a class="tolt" data-microtip-position="top-left"  data-tooltip="Disable"><i class="far fa-signal-alt-slash"></i></a></li>
+                                <li><a  class="tolt" data-microtip-position="top-left" href="/dashboard_pro/listemaison" data-tooltip="Delete" (click)="delete(item._id,i)"><i class="far fa-trash-alt"></i></a></li>
+                            </ul>
+                        </div>
+                    </article>
+                
+                    </div>
+                </div>
+
+    </div>
+    <!-- content end -->	
+    <div class="dashbard-bg gray-bg"></div>
+</div>
+
+
